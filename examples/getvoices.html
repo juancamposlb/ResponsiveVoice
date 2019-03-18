@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Get Voices</title>
+<script type='text/javascript' src='http://code.jquery.com/jquery-2.1.4.min.js'></script>
+<script type='text/javascript' src='../responsivevoice.src.js'></script>
+</head>
+
+<body>
+	
+
+<input type="button" onclick='getvoicesname()' value='list name' />
+<input type="button"  onclick='getvoices()' value='list name and lang' />
+<input type="button" onclick='getvoicesuri()' value='list URI' />
+<br />
+<div id='voicesdiv'></div>
+<script>
+
+
+
+        responsiveVoice.OnVoiceReady = function() {
+
+            if (speechSynthesis.getVoices().length==0)
+                    speechSynthesis.onvoiceschanged = function() {console.log('voice ready'); getvoices();}
+            else
+                    getvoices();
+
+        }    
+    
+    
+    
+	function getvoices() {
+	
+            var v = window.speechSynthesis.getVoices();
+		
+            var code="<table>";
+
+
+            for (var i=0; i<v.length; i++) {
+
+                    code += "<tr><td>" + v[i].name + "</td><td>" + v[i].lang + "</td></tr>";
+
+            }
+            code += "</table>";
+
+            $('#voicesdiv').html(code);
+		
+	};
+	function getvoicesuri() {
+	
+            var v = window.speechSynthesis.getVoices();
+		
+            var code="<table>";
+
+
+            for (var i=0; i<v.length; i++) {
+
+                    code += "<tr><td>" + v[i].voiceURI + "</td></tr>";
+
+            }
+            code += "</table>";
+
+            $('#voicesdiv').html(code);
+		
+	};	
+	
+	function getvoicesname() {
+	
+            var v = window.speechSynthesis.getVoices();
+		
+            var code="<table>";
+
+
+            for (var i=0; i<v.length; i++) {
+
+                    code += "<tr><td>" + v[i].name + "</td></tr>";
+
+            }
+            code += "</table>";
+
+            $('#voicesdiv').html(code);
+		
+	};
+	
+
+</script>
+
+</body>
+</html>

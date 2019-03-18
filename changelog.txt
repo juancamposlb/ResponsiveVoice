@@ -1,0 +1,110 @@
+Version 1.3.8
+194 Cross Browser and Device Text to Speech Voices across 52 Languages Now Supported
+Added US English Male fallback voice using TTS-API
+Support for alternative Google TTS fallback
+Added 25 new native languages on Android 4/5
+Added new test script testrun.php
+Fixed Afrikaans Language
+Fixed UK Male fallback
+Added Language: Swedish Male
+Added Language: Slovak Male
+Added Language: Norwegian Male
+Added Language: Latin Male
+Added Language: Hungarian Male
+Added Language: Greek Male
+Added Language: Danish Male
+Added Language: Czech Male
+Added Language: Finnish Male
+Added Language: Polish Female
+Fixed Voice Rate on iOS
+
+Version 1.3.7
+Improved stability on mobile devices
+Improved fallback mode
+Added support for pitch, rate and volume on TTS where available
+168 Cross Browser and Device Text to Speech Voices across 51 Languages Now Supported
+Added Language: Australian Female Text to Speech Voices
+Added Language: Finnish Female Text to Speech Voices
+Added Language: Afrikaans Male Text to Speech Voices
+Added Language: Albanian Male Text to Speech Voices
+Added Language: Arabic Male Text to Speech Voices
+Added Language: Armenian Male Text to Speech Voices
+Added Language: Czech Female Text to Speech Voices
+Added Language: Danish Female Text to Speech Voices
+Added Language: Esperanto Male Text to Speech Voices
+Added Language: Hatian Creole Female Text to Speech Voices
+Added Language: Icelandic Male Text to Speech Voices
+Added Language: Indonesian Female Text to Speech Voices
+Added Language: Latin Female Text to Speech Voices
+Added Language: Latvian Male Text to Speech Voices
+Added Language: Macedonian Male Text to Speech Voices
+Added Language: Modavian Male Text to Speech Voices
+Added Language: Montenegrin Male Text to Speech Voices
+Added Language: Polish Female Text to Speech Voices
+Added Language: Brazilian Portuguese Female Text to Speech Voices
+Added Language: Portuguese Female Text to Speech Voices
+Added Language: Serbo-Croation Male Text to Speech Voices
+Added Language: Slovak Female Text to Speech Voices
+Added Language: Spanish Latin American Female Text to Speech Voices
+Added Language: Swahili Male Text to Speech Voices
+Added Language: Tamil Male Text to Speech Voices
+Added Language: Thai Female Text to Speech Voices
+Added Language: Vietnamese Male Text to Speech Voices
+Added Language: Welsh Male Text to Speech Voices
+Updated Swedish Text to Speech Voices
+Updated Romanian Text to Speech Voices
+Updated Japanese Text to Speech Voices
+Updated Hindi Text to Speech Voices
+Updated Chinese Text to Speech Voices
+Updated Korean Text to Speech Voices
+Updated Dutch Text to Speech Voices
+
+Version 1.3.6
+Improved examples
+Added Support for Safari 8 Languages
+Added Language: Turkish
+Added Language: Norwegian
+Removed jQuery dependency
+
+Version 1.3.5
+Fixed jQuery dependency issue
+Speak() Auto-cancels if it was playing already
+Improved fallback mode stability
+
+
+Version 1.3.4
+Added voice-animated logo to example
+Added Feature: isPlaying()
+Fixed Default Voice
+
+Version 1.3.3
+Improved Fallback Audio support
+Added Language: Russian
+Added Language: Korean
+Added Language: Japanese
+Added Language: Chinese
+Added Language: Greek
+Added Language: Swedish
+Added Language: Hindi
+Added Language: Catalan
+Added iOS auto-initialization for voices
+Fixed IE PlaybackRate
+Added Semantic Versioning
+Improved iOS stability
+
+Version 1.2
+Improved CorsProxy
+Added Language: Dutch
+Added Language: Romanian
+Voice Improvements
+Added OnLoad Event
+
+Version 1.1
+Added getVoices iOS timed support
+Removed jQuery dependency
+HTML Example
+Added Default Voice
+Added Multipart Text Support (100 character limit)
+Added Fallback Mode
+Added CorsProxy
+Added IE Support

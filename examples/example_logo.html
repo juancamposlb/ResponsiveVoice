@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Responsive Voice</title>
+    <style>
+        .poweredby {
+
+            text-align: center;
+            font-family: arial;
+            font-size: 9px;
+            /*margin-right: 15px;*/
+        }
+
+        .poweredby strong{
+
+            font-size:11px;
+            letter-spacing: -0.05em;
+        }
+
+
+        .poweredby_container {
+            width:100px;
+            height:100px;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="poweredby_container">
+    
+        <svg viewBox="-50 -50 612 612" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+         <filter id="black-glow">
+            <feColorMatrix type="matrix" values=
+                        "0 0 0 0.6   0
+                         0 0 0 0   0
+                         0 0 0 0   0
+                         0 0 0 1 0"/>
+            <feGaussianBlur id="filterblur" stdDeviation="25" result="coloredBlur"/>
+            <feMerge>
+                <feMergeNode in="coloredBlur"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+        <g style="filter:url(#black-glow)">
+          <path id="svg_1" d="m71,460l-41,-460l451,0l-41,460l-185,52" fill="#c10908"/>
+          <path id="svg_2" d="m256,472l149,-41l35,-394l-184,0" fill="#e62e42"/>
+          </g>
+          <image xlink:href="i/mouth.png" id="svg_4" height="311" width="285" y="95" x="114"/>
+        </svg>
+        <div class="poweredby">
+            Powered by<br/><strong>ResponsiveVoice</strong>
+        </div>
+    </div>
+<script>
+
+    var filterblur = document.getElementById("filterblur");
+    var maxradius = 40;
+    var rdelta = 12;
+    var radius = maxradius/2;
+
+    function update() {
+        
+        requestAnimationFrame(update);
+
+        if (typeof responsiveVoice !== 'undefined' && responsiveVoice.isPlaying()) {
+            radius += (Math.random() * rdelta) - rdelta/2;
+            if (radius>maxradius) radius = maxradius/2;
+            if (radius<0) radius = maxradius/2;
+            filterblur.setAttribute("stdDeviation",radius);
+        } else {
+            filterblur.setAttribute("stdDeviation",0);
+        }
+    }
+
+    update();
+    
+</script>
+
+</body>
+
+</html>

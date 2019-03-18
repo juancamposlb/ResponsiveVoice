@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type='text/javascript' src='http://code.jquery.com/jquery-2.1.4.min.js'></script>
+    </head>
+    <body>
+        <textarea id="text" cols="45" rows="3">Test</textarea>
+        <button onclick="play();" >Play</button>
+        <script>
+            
+            
+            function play() {
+                
+                
+//                var v = $("<video />");
+//                $("<video />", {
+//                    id:"video1",
+//                    src: 'https://translate.google.com/translate_tts?ie=UTF-8&q=' + $("#text").val()  + ',&tl=en-GB&sv=&vn=',
+//                    autoplay:true
+//                }).appendTo('body');
+//                return;
+               var iframe = $("<iframe />");
+           $("<iframe />", {
+                        name: 'frame1',
+                        id: 'frame1',
+                        src: 'https://translate.google.com/translate_tts?ie=UTF-8&q=' + $("#text").val()  + ',&tl=en-GB&sv=&vn='
+                    }).appendTo('body');
+                    
+                  var scriptTag = "<script>console.log('test');<\/script>";
+                  var scriptTag = "<div>console.log('test');<\/div>";
+                  setTimeout(function(){
+                      console.log($(iframe));
+                      console.log($($(iframe).contents().find("video"))[0]);
+                              
+                    $("<iframe />").contents().find("body").append(scriptTag);
+                  },100);
+                
+            }
+            
+            
+            
+        </script>
+        
+        
+        
+    </body>
+</html>
